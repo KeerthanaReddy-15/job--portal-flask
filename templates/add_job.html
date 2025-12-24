@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Job</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">JobPortal</div>
+    <a href="/dashboard" class="logout-btn">Back</a>
+</div>
+
+<div class="form-container">
+    <h2>Add New Job</h2>
+
+    <form method="POST">
+        <input type="text" name="title" placeholder="Job Title" required>
+        <input type="text" name="company" placeholder="Company Name" required>
+        <input type="text" name="location" placeholder="Location" required>
+        <textarea name="description" placeholder="Job Description" required></textarea>
+
+        <button type="submit">Add Job</button>
+    </form>
+</div>
+
+</body>
+</html>

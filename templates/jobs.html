@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jobs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">JobPortal</div>
+    <div>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/applied-jobs">My Applied Jobs</a>
+        <a class="logout-btn" href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="jobs-container">
+    <h2>Available Jobs</h2>
+
+    {% for job in jobs %}
+    <div class="job-card">
+        <h3>{{ job[1] }}</h3>
+        <p><b>Company:</b> {{ job[2] }}</p>
+        <p><b>Location:</b> {{ job[3] }}</p>
+        <p><b>Description:</b> {{ job[4] }}</p>
+
+        <form action="/apply/{{ job[0] }}" method="POST">
+            <button class="apply-btn">Apply</button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
