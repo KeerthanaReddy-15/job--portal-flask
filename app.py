@@ -40,7 +40,7 @@ init_db()
 # ---------- HOME ----------
 @app.route("/")
 def home():
-    return "Job Portal Project Started Successfully"
+    return render_template("login.html")
 
 
 
